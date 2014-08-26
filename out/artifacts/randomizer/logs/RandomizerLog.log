@@ -1,0 +1,6 @@
+[2014-8-25] [14:53:44] [ERROR] [com.falconraptor.utilities.files.Read.Read] java.lang.NullPointerException
+[2014-8-25] [14:53:44] [ERROR] [com.falconraptor.utilities.files.Read.read] java.lang.NullPointerException
+[2014-8-25] [14:53:44] [INFO] Shut Down Hook Attached.
+[2014-8-25] [14:53:45] [ERROR] [com.falconraptor.utilities.files.Read.Read] java.lang.NullPointerException
+[2014-8-25] [14:53:45] [ERROR] [com.falconraptor.utilities.files.Read.read] java.lang.NullPointerException
+[2014-8-25] [14:53:47] [DEBUG] [com.falconraptor.utilities.files.Write.Write] File Recreated
