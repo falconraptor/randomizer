@@ -1,6 +1,6 @@
 package com.falconraptor.randomizer;
 
-import com.falconraptor.utilities.*;
+import com.falconraptor.utilities.Shutdown;
 import com.falconraptor.utilities.files.Read;
 import com.falconraptor.utilities.files.Write;
 import com.falconraptor.utilities.logger.Logger;
@@ -21,8 +21,10 @@ public class Randomizer {
         Shutdown shutdown=new Shutdown();
         shutdown.packagename= Randomizer.class.getSimpleName();
         shutdown.attachShutDownHook();
+        randomize();
     }
-    public Randomizer() {
+
+    public static void randomize() {
         String filename=JOptionPane.showInputDialog(null,"Please enter the file name of the file you would like to randomize");
         if (filename.equals("")) {
             JOptionPane.showMessageDialog(null,"Filename is blank","Randomizer",JOptionPane.ERROR_MESSAGE);
@@ -43,6 +45,8 @@ public class Randomizer {
             objects.remove(index);
             i--;
         }
+        Collections.addAll(objects, objectstorandomize);
+        for (int i = 0; i < objects.size(); i++) Logger.logALL(objects.get(i) + "=>" + randomized.get(i));
         Logger.logINFO("Writing Randomized Items to file");
         Write.Write(filename.substring(0,filename.indexOf("."))+"randomized.txt",false);
         Write.write(randomized);
